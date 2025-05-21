@@ -1,0 +1,114 @@
+/* Background gradasi yang menenangkan */
+body {
+    background: linear-gradient(to bottom, #ffffff, rgb(85, 127, 192)); /* Gradasi biru muda */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Container profil pengguna */
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Transparan putih untuk efek lembut */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 800px; /* Membatasi lebar kontainer */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Judul halaman */
+h2 {
+    color: #4a90e2; /* Biru lembut */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Form input styles */
+.form-control {
+    border-radius: 8px;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    background-color: #f5f7fa;
+}
+
+/* Focus style for form inputs */
+.form-control:focus {
+    border-color: #4a90e2; /* Biru lembut */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+/* Label input */
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+/* Styling untuk gambar profil */
+img {
+    border-radius: 50%;
+    border: 3px solid #4a90e2; /* Border biru lembut untuk foto profil */
+    margin-bottom: 15px;
+}
+
+/* Styling untuk button */
+button {
+    background-color: #4a90e2; /* Biru lembut */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Agar tombol lebih besar */
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #3c7dc4; /* Warna biru lebih gelap saat hover */
+}
+
+/* Custom link button for logout */
+a.btn-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling for file input */
+input[type="file"] {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* Tombol di responsif */
+    }
+}
