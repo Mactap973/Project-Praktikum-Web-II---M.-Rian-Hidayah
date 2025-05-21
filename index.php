@@ -1,4 +1,6 @@
-<?php include 'db.php'; ?>
+<?php 
+session_start();
+include 'db.php'; ?>
 
 <!doctype html>
 <html lang="en">
@@ -8,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Website Kursus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <style>
         .carousel-container {
@@ -24,8 +27,8 @@
             height: 250px;
             object-fit: cover;
         }
-
     </style>
+
 </head>
 
 <body>
@@ -61,13 +64,14 @@
     <!-- Cards -->
     <div class="container my-5 mb-5">
         <h3 class="text-center mb-4">Daftar Kursus</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-2">
             <?php
             $result = $conn->query("SELECT * FROM courses");
             while ($row = $result->fetch_assoc()) {
                 echo "
                 <div class='col'>
                     <div class='card h-100'>
+                    <a href='courses_detail.php?id={$row['id']}' class='text-decoration-none text-dark'>
                         <img src='{$row['image_url']}' class='card-img-top' alt='{$row['name']}'>
                         <div class='card-body'>
                             <h5 class='card-title'>{$row['name']}</h5>
